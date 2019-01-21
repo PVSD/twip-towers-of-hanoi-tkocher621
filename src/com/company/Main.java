@@ -30,12 +30,17 @@ public class Main {
             System.out.println("Input is not a number!");
             PromptInput();
         }
+        return null;
     }
 
     public static void main(String[] args) {
 
         System.out.print("Enter number of blocks: ");
         TowersOfHanoi toh = PromptInput();
+        if (toh != null)
+        {
+            toh.Solve(toh.size,'1', '2', '3');
+        }
 
     }
 }
